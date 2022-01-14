@@ -1,0 +1,10 @@
+
+#Package Files #
+*.jar
+
+#IntelliJ
+out/
+
+
+target/*
+!target/*.html
