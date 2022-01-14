@@ -60,3 +60,11 @@ git commit -m "Add fix2.txt"
 git checkout main
 14. Gör nu en cherry-pick på commiten som lägger till fix2.txt över till main grenen.
 git cherry-pick 5f5fac4
+15. I filen fix2.txt ska du nu skriva in de kommandon som användes för att utföra stegen hit fram.
+git add .
+git commit -m "Add textlog in fix2.txt"´
+16. Skapa ett tomt repository på github och pusha all information från det lokala till remote
+repositoriet.
+git remote add origin https://github.com/GreenGard/Javaverktyg-Laboration1.git
+git push --all
+git push --tag
