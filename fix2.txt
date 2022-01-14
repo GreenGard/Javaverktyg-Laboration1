@@ -1,0 +1,62 @@
+1. Skapa ett git repo med en branch kallad main.
+git init
+git branch -m master main
+2. Skapa en fil som heter README.md och lägg till 3 rader med djur i filen.
+duck
+moose
+cat
+3. Gör en commit med message: Initial commit
+git add .
+git commit -m "Initial commit"
+(81e44....)
+4. Skapa en ny branch med namnet feature1 och växla över till den.
+git branch feature1
+git checkout feature1
+5. Lägg till dog sist i filen som ett fjärde djur och byt ut moose mot mouse samt gör en commit med
+lämpligt message.
+5 git add . 
+git commit -m "Add dog change animal"
+(aec505......)
+6. Växla tillbaka till main och ändra moose till mahmut och gör
+en commit.
+git checkout main 
+git add; 
+git commit -m "change mouse to mahmut"
+(bb01......)
+7. Merga nu feature1 grenen med main.
+Om du gjort rätt tidigare så bör det nu uppstå en merge conflict
+som behöver lösas och resultatet ska efter merge vara:
+duck
+mahmut
+mouse
+cat
+dog
+git add 
+git commit -m "fixed conflict and merge feature1"
+(6ce4....)
+merge bb01 aec505
+8. Skapa en tag med message: extinct som pekar på merge commiten.
+git tag extinct
+(6ce4bc)
+9. Använd nu reset för att flytta main och HEAD tillbaka till föregående commit på main branchen.
+README filen ska nu endast innehålla
+duck
+mahmut
+cat
+9. git reset --hard bb01
+10. Skapa en ny feature2 gren men stanna kvar på main grenen.
+git branch feature2
+11. Skapa en commit som gör så alla djurnamnen börjar med stor bokstav.
+git add 
+git commit -m "Fix uppercase"
+12. Växla nu till feature2 och skapa två commits där första commiten lägger till en fil som heter
+fix1.txt och den andra commiten lägger till en fil som heter fix2.txt.
+git checkout feature2
+git add
+git commit -m "Add fix1.txt"
+git add
+git commit -m "Add fix2.txt"
+13. Byt tillbaka till main branchen och se att filerna fix1 och fix2 försvunnit i vårt lokala filsystem.
+git checkout main
+14. Gör nu en cherry-pick på commiten som lägger till fix2.txt över till main grenen.
+git cherry-pick 5f5fac4
